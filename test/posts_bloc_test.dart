@@ -10,9 +10,11 @@ class FakeRepo extends PostsRepository {
   FakeRepo() : super(ApiService());
 
   bool fail = false;
+  bool? lastRefresh;
 
   @override
   Future<List<Post>> getPosts({bool refresh = false}) async {
+    lastRefresh = refresh;
     if (fail) throw Exception('error');
     return [
       Post(id: 1, userId: 1, title: 'Flutter tips', body: 'Use const widgets'),
