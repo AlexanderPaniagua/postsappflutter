@@ -6,7 +6,10 @@ Flutter app that shows posts from [JSONPlaceholder](https://jsonplaceholder.typi
 - Images of each post in a grid, tap one to see it full screen
 - Comments of each post, with search, tap a comment to see all the text
 
-State is handled with flutter_bloc.
+## Convetion
+
+- Code convention: english and camel case
+- Architecture: simple BLoC layer
 
 ## Run
 
@@ -18,6 +21,7 @@ flutter run
 Tests:
 
 ```
+flutter analyze
 flutter test
 ```
 
